@@ -1,43 +1,90 @@
-.principlaContainer{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    width: 100%;
+.principlaContainer {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(30, 30, 43);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.buscador{
     display: flex;
-
-    
+    justify-content: space-evenly;
 }
 
-.leftContainer p {
-    height: 100%;
-    width: 30%;
-  }
-
-.imgCiudad{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: auto;
-    width: 25%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+.textBuscar{
+    color: white;
 }
 
-.textsImg{
-    position: relative; 
-    z-index: 1; 
-    margin: 0; 
-    padding: 10px; 
-    color: white; 
-    background-color: rgba(0, 0, 0, 0.5); 
+.inputBuscar{
+    margin-top: 10px;
+}
+
+.buttonBuscar{
+    margin-left: 5px;
+}
+
+.leftContainer {
+  height: 100%;
+  width: 30%;
+  position: relative;
+}
+
+.imgCiudad {
+  height: auto;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.textsImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(280, 280, 280, 0.2); 
 }
 
 .rightContainer {
-    height: 62.2%; 
-    width: 70%;
-    background-color: rgb(30, 30, 43);
-    display: flex; 
-    flex-direction: column; 
-  }
-  
+  height: 56.9%;
+  width: 70%;
+  background-color: rgb(30, 30, 43);
+  display: flex;
+  flex-direction: column;
+}
+
+.topContainer p {
+  color: white;
+  padding-left: 80px;
+}
+
+.bottomContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+hr {
+  border: 1px solid white;
+  margin: 20px;
+}
+
+.textsCard {
+  padding-top: 40px;
+}
+
+.textsCard p {
+  color: white;
+}
