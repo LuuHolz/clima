@@ -2,18 +2,20 @@
 import { useState } from 'react';
 import useWeather from '../Hooks/useWeather.tsx';
 import imgCiudad from '../assets/ciudad.jpg';
-import Cards from '../Components/Cards';
+import Card from '../Components/Cards';
+import { DataWeather } from "../Types/Weather.type";
 
 const Home = () => {
   const { isLoading, getWeather } = useWeather();
   const [location, setLocation] = useState("");
+  const [weather, setWeather] = useState<DataWeather>(null);
 
   const apiCall = async (e) => {
     e.preventDefault();
-
+    
     try {
-      const response = await getWeather(location); // Llamar a getWeather directamente
-      // Procesar la respuesta aquí...
+      const response = await getWeather(location); 
+      setWeather(response)
     } catch (error) {
       throw error;
     }
@@ -57,9 +59,11 @@ const Home = () => {
           <hr />
 
           <div className='bottomContainer'>
-            <Cards />
-            <Cards />
-            <Cards />
+            {weather !== null ? (
+              <Card weather={weather} />
+            ) : (
+              <div className="noData">No se encontraron datos meteorológicos</div>
+            )}
           </div>
         </div>
       </div>
