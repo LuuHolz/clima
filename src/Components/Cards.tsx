@@ -1,12 +1,9 @@
-import React from 'react';
 
 const Cards = ({ weather }) => {
 
-    //CHAT GPT (ERROR AL APRETAR EL B OTON BUSCAR00000000000000000000000000++
-        
-    )
+    //CHAT GPT (ERROR AL APRETAR EL BOTON BUSCAR)
     if (!weather || !weather.main || !weather.main.temp) {
-        return <div>No hay datos de temperatura disponibles</div>;
+        return <div className='noData'>No hay datos de temperatura disponibles</div>;
     }
 
     return (
